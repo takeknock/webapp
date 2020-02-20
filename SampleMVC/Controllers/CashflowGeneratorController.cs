@@ -9,15 +9,17 @@ namespace SampleMVC.Controllers
     public class CashflowGeneratorController : Controller
     {
         // GET: CashflowGenerator
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        public string Index()
+        public ActionResult Index()
         {
-            return "This is my <b>default</b> aciton ";
+            ViewBag.Message = "Index page message";
+            ViewBag.NumTimes = 4;
+            return View();
         }
+
+        //public string Index()
+        //{
+        //    return "This is my <b>default</b> aciton ";
+        //}
 
         public string Sample(string businessCenters)
         {
